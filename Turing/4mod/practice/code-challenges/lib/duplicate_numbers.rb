@@ -14,3 +14,9 @@ def duplicates(nums)
     k if v.size.even?
   end[0]
 end
+# def duplicates(nums)
+#   # grouped = nums.group_by { |num| num }
+#   nums.tally.find do |k, v|
+#     k if v.size.even?
+#   end
+# end
