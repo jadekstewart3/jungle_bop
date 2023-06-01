@@ -19,3 +19,13 @@ def find_next_palindrome(int)
     int + 1
   end
 end
+
+# x = first character in array
+# y = second character in array
+# def wtr(string)
+#   string.chars.reduce do |x, y|
+#     require 'pry'; binding.pry
+#     y + x
+#   end
+# end
+# switch the orientation of the letters being added together and bing bang moob
