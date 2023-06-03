@@ -9,6 +9,6 @@ RSpec.describe 'next palindrome' do
   end
 
   # it "helps me understand reduce" do 
-  #   expect(wtr("string")).to eq("gnirts")
+  #   expect(reverse("string")).to eq("gnirts")
   # end
 end
