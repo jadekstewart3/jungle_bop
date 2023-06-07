@@ -1,4 +1,6 @@
 class Attendee
+  attr_accessor :pass_id
+  
   def initialize(height)
     @height = height
     @pass_id = nil
