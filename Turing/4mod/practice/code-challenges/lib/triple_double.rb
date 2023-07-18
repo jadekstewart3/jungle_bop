@@ -70,6 +70,16 @@
 
 ##solution using regex
 
-def triple_double(num1, num2)
-  num1.to_s.scan(/(.)\1\1/).any? { |n| /#{n}{2}/ === num2.to_s } ? 1 : 0
+# def triple_double(num1, num2)
+#   num1.to_s.scan(/(.)\1\1/).any? { |n| /#{n}{2}/ === num2.to_s } ? 1 : 0
+# end
+
+#simpler solution using .include?
+
+def triple_double(num1,num2)
+  (0..9).each do |i| 
+    
+    return 1 if num1.to_s.include?(i.to_s*3) && num2.to_s.include?(i.to_s*2)
+  end
+  0
 end
