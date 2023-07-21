@@ -13,7 +13,13 @@ end
 
 #chat jeeps suggestions
 
+# def printer_error(s)
+#   error_count = s.scan(/[^a-m]/).count #scan and regex powerful af
+#   "#{error_count}/#{s.length}"
+# end
+
+##can also use
+
 def printer_error(s)
-  error_count = s.scan(/[^a-m]/).count #scan and regex powerful af
-  "#{error_count}/#{s.length}"
+  "#{s.count('^a-m')}/#{s.length}"
 end
