@@ -9,6 +9,11 @@
 
 #refactor
 
+# def remove_char(s)
+#   s.chars[1..-2].join
+# end
+
+#clever code wars solutions
 def remove_char(s)
-  s.chars[1..-2].join
+  s[1...-1]
 end
