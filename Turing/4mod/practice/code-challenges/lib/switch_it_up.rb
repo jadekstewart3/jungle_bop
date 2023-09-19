@@ -11,7 +11,14 @@
                   9 => "Nine"
     
                 }
+# my first attempt
+
+# def switch_it_up(number)
+#   DICTIONARY.include?(number) ? DICTIONARY[number] : false
+# end
+
+NUMBERS_ARRAY = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
 
 def switch_it_up(number)
-  DICTIONARY.include?(number) ? DICTIONARY[number] : false
+  NUMBERS_ARRAY[number]
 end
