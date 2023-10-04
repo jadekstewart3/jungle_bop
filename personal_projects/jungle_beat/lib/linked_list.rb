@@ -40,4 +40,28 @@ class LinkedList
     end
     result.strip
   end
+
+  def prepend(data)
+    new_node = Node.new(data)
+    new_node.next_node = @head
+    @head = new_node    
+  end
+
+  def insert(position, data)
+    if position == 0
+      prepend(data)
+    else
+      new_node = Node.new(data)
+      current_node = @head
+      (position - 1).times do 
+        if current_node.nil?
+          raise "Position out of range!"
+        end
+        current_node = current_node.next_node
+      end
+      new_node.next_node = current_node.next_node
+      current_node.next_node = new_node
+      require 'pry'; binding.pry
+    end
+  end
 end

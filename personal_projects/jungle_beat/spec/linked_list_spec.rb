@@ -47,4 +47,32 @@ RSpec.describe LinkedList do
       expect(linked_list.to_string).to eq("doop deep")
     end
   end
+
+  describe "prepend" do 
+    it "can add a node to the beginning of the list" do 
+      linked_list.append("plop")
+
+      expect(linked_list.to_string).to eq("plop")
+
+      linked_list.append("suu")
+      linked_list.prepend("dop")
+
+      expect(linked_list.to_string).to eq("dop plop suu")
+      expect(linked_list.count).to eq(3)
+    end
+  end
+
+  describe "insert" do 
+    it "inserts an element at the desired position" do 
+      linked_list.append("plop")
+      linked_list.append("suu")
+      linked_list.prepend("dop")
+
+      expect(linked_list.to_string).to eq("dop plop suu")
+      
+      linked_list.insert(1, "woo")
+
+      expect(linked_list.to_string).to eq("dop woo plop suu")
+    end
+  end
 end
