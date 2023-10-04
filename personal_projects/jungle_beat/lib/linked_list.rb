@@ -20,4 +20,24 @@ class LinkedList
     end
     new_node.data
   end
+
+  def count
+    current_node = @head
+     count = 0 
+    while current_node
+      count += 1
+      current_node = current_node.next_node
+    end
+    count
+  end
+
+  def to_string
+    current_node = @head
+    result = " "
+    while current_node
+      result += "#{current_node.data} "
+      current_node = current_node.next_node
+    end
+    result.strip
+  end
 end
