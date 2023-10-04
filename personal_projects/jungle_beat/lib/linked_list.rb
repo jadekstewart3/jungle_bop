@@ -61,7 +61,49 @@ class LinkedList
       end
       new_node.next_node = current_node.next_node
       current_node.next_node = new_node
-      require 'pry'; binding.pry
     end
+  end
+
+  def find(start_position, num_of_elements)
+    return nil if @head.nil? || start_position < 0 || num_of_elements <= 0
+
+    current_node = @head
+    current_index = 0 
+
+    while current_index < start_position
+      current_node = current_node.next_node
+      current_index += 1
+    end
+
+    return nil if current_node.nil?
+
+    result = []
+
+    while num_of_elements > 0 
+      result << current_node.data
+      current_node = current_node.next_node
+      num_of_elements -= 1
+    end
+    result.join(" ")
+  end
+
+  def includes?(data)
+    current_node = @head
+
+    while current_node
+      return true if current_node.data == data
+      current_node = current_node.next_node
+    end
+    false
+  end
+
+  def pop
+    current_node = @head
+    while current_node.next_node
+      prev_node = current_node
+      current_node = current_node.next_node
+    end
+    prev_node.next_node = nil
+    current_node.data
   end
 end

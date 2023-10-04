@@ -75,4 +75,45 @@ RSpec.describe LinkedList do
       expect(linked_list.to_string).to eq("dop woo plop suu")
     end
   end
+
+  describe "find" do 
+    it "finds the element at the specified position and returns it plus others if indicated" do 
+      linked_list.append("deep")
+      linked_list.append("woo")
+      linked_list.append("shi")
+      linked_list.append("shu")
+      linked_list.append("blop")
+
+      expect(linked_list.to_string).to eq("deep woo shi shu blop")
+
+      expect(linked_list.find(2, 1)).to eq("shi")
+    end
+  end
+
+  describe "includes?" do 
+    it "returns true if a list contains the argument" do 
+      linked_list.append("deep")
+      linked_list.append("woo")
+      linked_list.append("shi")
+      linked_list.append("shu")
+      linked_list.append("blop")
+
+      expect(linked_list.includes?("deep")).to eq(true)
+      expect(linked_list.includes?("dep")).to eq(false)
+    end
+  end
+
+  describe "pop" do 
+    it "removes the last element from the list" do 
+      linked_list.append("deep")
+      linked_list.append("woo")
+      linked_list.append("shi")
+      linked_list.append("shu")
+      linked_list.append("blop")
+
+      expect(linked_list.pop).to eq("blop")
+      expect(linked_list.pop).to eq("shu")
+      expect(linked_list.to_string).to eq("deep woo shi")
+    end
+  end
 end
