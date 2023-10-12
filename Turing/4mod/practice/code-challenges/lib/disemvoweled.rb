@@ -6,6 +6,10 @@
 
 #other solutions
 
+# def disemvoweled(str)
+#   str.delete('aeiouAEIOU')
+# end
+
 def disemvoweled(str)
-  str.delete('aeiouAEIOU')
+  str.tr('aeouiAEOUI', '')
 end
