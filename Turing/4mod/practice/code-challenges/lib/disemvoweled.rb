@@ -1,11 +1,11 @@
 #my attempt
 
-def disemvoweled(str)
-  str.scan(/[^aeiouAEIOU]/).join
-end
+# def disemvoweled(str)
+#   str.scan(/[^aeiouAEIOU]/).join
+# end
 
 #other solutions
 
-def disemvowel(str)
+def disemvoweled(str)
   str.delete('aeiouAEIOU')
 end
