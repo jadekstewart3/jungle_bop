@@ -15,3 +15,7 @@ def solution(string)
 end
 #when an uppercase letter is found it captures it, 
 # in replacement string it inserts a space
+
+def solution(string)
+  string.chars.map { |s| s == s.downcase ? s : " #{s}" }.join
+end
